@@ -18,5 +18,6 @@ namespace HotelAPI.Models
         public int Room { get; set; }
         public int Count_Peoples { get; set; }
         public string Status { get; set; }
+        public byte[] Image { get; set; }
     }
 }

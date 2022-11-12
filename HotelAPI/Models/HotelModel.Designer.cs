@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\ЛедровЕИ\source\repos\HotelAPI\HotelAPI\Models\HotelModel.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\lied0\source\repos\HotelAPI\HotelAPI\Models\HotelModel.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.
