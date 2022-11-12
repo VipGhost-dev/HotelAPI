@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using HotelAPI.Models;
@@ -21,6 +22,20 @@ namespace HotelAPI.Controllers
         public IQueryable<Hotel> GetHotel()
         {
             return db.Hotel;
+        }
+
+        [Route("api/apps/search")]
+        [HttpGet]
+        public async Task<IHttpActionResult> Searchhotel(string searchstring)
+        {
+            if (String.IsNullOrEmpty(searchstring))
+            {
+                return Ok(db.Hotel.ToList().ConvertAll(x => new HotelMod(x)));
+            }
+            else
+            {
+                return Ok(db.Hotel.ToList().ConvertAll(x => new HotelMod(x)).Where(x => x.Room.ToString().ToLower().Contains(searchstring.ToLower())));
+            }
         }
 
         // GET: api/Hotels/5
